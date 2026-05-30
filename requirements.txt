@@ -1,0 +1,9 @@
+Install Library
+
+pip install pycryptodome
+
+or 
+
+pip install -r requirements.txt
+
+pip install flask pycryptodome

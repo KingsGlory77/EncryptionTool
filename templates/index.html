@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Cyber Encryption Tool
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        🔒 Cyber Encryption Tool
+    </h1>
+
+    <form method="POST">
+
+        <label>
+            Algorithm
+        </label>
+
+        <select name="algorithm">
+
+            <option value="caesar">
+                Caesar Cipher
+            </option>
+
+            <option value="aes">
+                AES Encryption
+            </option>
+
+        </select>
+
+        <label>
+            Shift / Key
+        </label>
+
+        <input
+            type="text"
+            name="key"
+            required
+        >
+
+        <label>
+            Input
+        </label>
+
+        <textarea
+            name="text"
+            required
+        ></textarea>
+
+        <div class="btn-group">
+
+            <button
+                type="submit"
+                name="action"
+                value="encrypt">
+
+                Encrypt
+
+            </button>
+
+            <button
+                type="submit"
+                name="action"
+                value="decrypt">
+
+                Decrypt
+
+            </button>
+
+        </div>
+
+    </form>
+
+    <h2>
+        Output
+    </h2>
+
+    <div class="output">
+
+        {{ result }}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
